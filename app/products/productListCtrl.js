@@ -1,7 +1,7 @@
 (function(){
     'use strict';
     angular.module('productManagement')
-    .controller('ProductListController',['productResource',ProductListController]);
+    .controller('ProductListCtrl',['productResource',ProductListController]);
     
     function ProductListController(productResource){
         var vm = this;

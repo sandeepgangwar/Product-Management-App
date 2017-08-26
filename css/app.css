@@ -1,3 +1,46 @@
-body{
-    background-color: #c6d9f1;
-}
+html, body {
+    height: 100%;
+  }
+  
+  body {
+    background: url("https://t1.gstatic.com/images?q=tbn:ANd9GcQ9pYr1J9wADR6ZDBw_Y59XCgI2QObwW_Z-cFwxMrX4gF26WbdT");
+    background-size: 100% 100%;
+    background-size: cover;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: white;
+    text-shadow: 0 0 1px black;
+  }
+  
+  h1, h2 {
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  
+  footer {
+    background: white;
+    color: black;
+    text-shadow: none;
+    opacity: 0.5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 0.8em;
+  }
+  
+  footer a {
+    color: black;
+  }
+  
+  #main {
+    padding: 20px;
+  }
+  table{
+      color:black;
+  }
