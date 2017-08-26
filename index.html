@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ACME Product Management</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <script src="./js/angular.min.js">
+            
+        </script>
+    </head>
+    <body ng-app>
+    <table ng-init='products=[{
+  "productId":1,
+  "productName":"A",
+  "productCode":"B",
+  "price":12.90,
+  "imageUrl":"https://www.logomaker.com/wp-content/uploads/2015/06/Logo-Samples2-91-min.jpg"
+},
+{
+  "productId":1,
+  "productName":"A",
+  "productCode":"B",
+  "price":12.90,
+  "imageUrl":"https://www.logomaker.com/wp-content/uploads/2015/06/Logo-Samples2-91-min.jpg"
+}
+]'>
+        <thead>
+        <tr>   
+            <td>Image</td>
+            <td>Product</td>    
+            <td>Code</td>    
+            <td>Available</td>    
+            <td>Price</td>    
+        </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="product in products">
+                    <td><img style="width: 50px;margin:2px;" src="{{product.imageUrl}}" title="{{product.productName}}"></td>
+            <td>{{product.productName}}</td>    
+            <td>{{product.productCode}}</td>    
+            <td>{{product.releaseDate}}</td>    
+            <td>{{product.price | currency}}</td>
+            </tr>
+        </tbody>
+    </table>
+    </body>
+</html>
