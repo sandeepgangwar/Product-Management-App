@@ -41,6 +41,6 @@ html, body {
   #main {
     padding: 20px;
   }
-  table{
+  table,.panel-body{
       color:black;
   }

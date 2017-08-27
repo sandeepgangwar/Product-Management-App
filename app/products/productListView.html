@@ -1,26 +1,31 @@
 <div class="panel panel-primary">
     <div class="panel-heading" style="font-size:large">Product</div>
     <div class="panel-body">
-            <table class="table">
-                    <thead>
-                    <tr>   
-                        <td><button class="btn btn-primary" type="button" ng-click="vm.toogleImage()">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td><button class="btn btn-primary" type="button" ng-click="vm.toogleImage()">
                             {{vm.showImage?"Hide ":"Show "}}Image</button></td>
-                        <td>Product</td>    
-                        <td>Code</td>    
-                        <td>Available</td>    
-                        <td>Price</td>    
-                    </tr>
-                    </thead>
-                    <tbody>
-                        <tr ng-repeat="product in vm.products">
-                                <td><img ng-if="vm.showImage" style="width: 50px;margin:2px;" ng-src="{{product.imageUrl}}" title="{{product.productName}}"></td>
-                        <td>{{product.productName}}</td>    
-                        <td>{{product.productCode}}</td>    
-                        <td>{{product.releaseDate | date}}</td>    
-                        <td>{{product.price | currency}}</td>
-                        </tr>
-                    </tbody>
-                </table>    
+                    <td>Product</td>
+                    <td>Code</td>
+                    <td>Available</td>
+                    <td>Price</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="product in vm.products">
+                    <td><img ng-if="vm.showImage" style="width: 50px;margin:2px;" ng-src="{{product.imageUrl}}" title="{{product.productName}}"></td>
+                    <td><a ui-sref="productDetail({productId:product.productId})">{{product.productName}}</a></td>
+                    <td>{{product.productCode}}</td>
+                    <td>{{product.releaseDate | date}}</td>
+                    <td>{{product.price | currency}}</td>
+                    <td><a 
+                        ui-sref="productEdit({productId:product.productId})"
+                        class="btn btn-primary"
+                        >Edit</a></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
