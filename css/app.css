@@ -44,3 +44,19 @@ html, body {
   table,.panel-body{
       color:black;
   }
+
+  .wizard a{
+    background: #efefef;
+    display: inline-block;
+    margin-right: 5px;
+    min-width: 150px;
+    outline: none;
+    padding: 10px 40px 10px;
+    position: relative;
+    text-decoration: relative;
+  }
+
+  .wizard a.active{
+    background-color: #007ACC;
+    color: #fff;
+  }
