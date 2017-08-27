@@ -6,7 +6,9 @@
                 "productId":1,
                 "productName":"A",
                 "productCode":"B",
+                "description":"This is demo description",
                 "price":12.90,
+                "tags":["a","b"],
                 "releaseDate":"12 March 2015",
                 "imageUrl":"https://www.logomaker.com/wp-content/uploads/2015/06/Logo-Samples2-91-min.jpg"
               },
@@ -14,7 +16,11 @@
                 "productId":2,
                 "productName":"A",
                 "productCode":"B",
+                "description":"This is demo description",
                 "price":12.90,
+                "cost":12.30,
+                "tags":["a","b"],
+                "marginPercentage":12,
                 "releaseDate":"12 March 2015",
                 "imageUrl":"https://www.logomaker.com/wp-content/uploads/2015/06/Logo-Samples2-91-min.jpg"
               },
@@ -22,7 +28,11 @@
                 "productId":3,
                 "productName":"Video Game",
                 "productCode":"VG",
+                "description":"This is demo description",
                 "price":129.90,
+                "cost":12.30,
+                "tags":["a","b"],
+                "marginPercentage":12,
                 "releaseDate":"12 March 2013",
                 "imageUrl":"https://www.logomaker.com/wp-content/uploads/2015/06/Logo-Samples2-91-min.jpg"
               },
@@ -30,7 +40,11 @@
                 "productId":4,
                 "productName":"Scooter",
                 "productCode":"Scooter",
+                "description":"This is demo description",
                 "price":132.90,
+                "tags":["a","b"],
+                "cost":12.30,
+                "marginPercentage":12,
                 "releaseDate":"12 March 2013",
                 "imageUrl":"https://www.logomaker.com/wp-content/uploads/2015/06/Logo-Samples2-91-min.jpg"
               }
