@@ -1,1 +1,44 @@
-<div>Basic Product Information</div>
+<form class="form-horizontal">
+    <fieldset>
+        <legend>Basic Product Information</legend>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="inputProductName">Product Name</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" id="inputProductName" ng-model="vm.product.productName" placeholder="Product Name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="inputAvailabilityDate">
+                        Availability</label>
+            <div class="col-md-10">
+                <div class="input-group">
+                    <input type="text" 
+                        class="form-control"
+                     id="inputAvailabilityDate" 
+                     uib-datepicker-popup="MMM dd,yyyy"
+                     is-open="vm.opened"
+                     ng-model="vm.product.releaseDate">
+                    <span class="input-group-btn">
+                  <button class="btn btn-default" ng-click="vm.open($event)">
+                      <i class="glyphicon glyphicon-calender"></i></button></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="inputProductCode">
+                            Product Code</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" id="inputProductCode" ui-mask="AAA-***" ng-model="vm.product.productCode">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="inputProductDescription">Description</label>
+            <div class="col-md-10">
+                <textarea name="inputProductDescription" class="form-control" id="inputProductDescription" rows="3" placeholder="Description"
+                    ng-model="vm.product.description">
+                </textarea>
+            </div>
+        </div>
+
+    </fieldset>
+</form>

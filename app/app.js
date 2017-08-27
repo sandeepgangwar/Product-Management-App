@@ -2,6 +2,8 @@
     'use strict';   
     var app =angular.module('productManagement',['common.services', 
     'productResourceMock',
+    'ui.mask',
+    'ui.bootstrap',
     'ui.router']);
     app.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
         $urlRouterProvider.otherwise('/');
