@@ -14,8 +14,8 @@
                 <div class="input-group">
                     <input type="text" 
                         class="form-control"
-                     id="inputAvailabilityDate" 
-                     uib-datepicker-popup="MMM dd,yyyy"
+                     name="inputAvailabilityDate" 
+                     uib-datepicker-popup="yyyy/MM/dd"
                      is-open="vm.opened"
                      ng-model="vm.product.releaseDate">
                     <span class="input-group-btn">
@@ -37,6 +37,21 @@
                 <textarea name="inputProductDescription" class="form-control" id="inputProductDescription" rows="3" placeholder="Description"
                     ng-model="vm.product.description">
                 </textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4">
+                <span>
+                    <button class="btn btn-success" 
+                    ng-click="vm.submit()"
+                    style="width:80px;margin-right:10px">Save</button>
+                </span>
+                <span>
+                    <button class="btn btn-danger" 
+                    ng-click="vm.cancel()"
+                    style="width:70px;">Cancel</button>
+                </span>
             </div>
         </div>
 

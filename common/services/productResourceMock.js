@@ -50,9 +50,9 @@
               }
               ];
 
-              var produuctUrl = "/api/products";
-              $httpBackend.whenGET(produuctUrl).respond(products);
-              var editingRegex  = new RegExp(produuctUrl + "/[0-9][0-9]*",'');
+              var productUrl = "/api/products";
+              $httpBackend.whenGET(productUrl).respond(products);
+              var editingRegex  = new RegExp(productUrl + "/[0-9][0-9]*",'');
               $httpBackend.whenGET(editingRegex).respond(function(method,url,data){
                 var product = {productId:0};
                 var parameters = url.split('/');
@@ -64,8 +64,8 @@
                 return [200,product,{}];
               });
 
-              $httpBackend.whenPOST(produuctUrl).respond(function(method,url,data){
-                  var product = angular.fromJSON(data);
+              $httpBackend.whenPOST(productUrl).respond(function(method,url,data){
+                  var product = angular.fromJson(data);
                   if(!product.productId){
                       product.productId = products[products.length -1].productId + 1;
                       products.push(product);

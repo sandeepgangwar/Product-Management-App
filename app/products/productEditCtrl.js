@@ -1,7 +1,7 @@
 (function(){
 'use strict';
 angular.module('productManagement')
-.controller('ProductEditCtrl',['product',ProductEditCtrl]);
+.controller('ProductEditCtrl',['product','$state',ProductEditCtrl]);
 
 function ProductEditCtrl(product){
     var vm = this;
@@ -17,6 +17,14 @@ function ProductEditCtrl(product){
         $event.preventDefault();
         $event.stopPropagation();
         vm.opened = !vm.opened;
+    }
+
+    vm.submit = function(){
+        vm.product.$save();
+    }
+
+    vm.cancel = function(){
+        $state.go('productList');
     }
 }
 }());
